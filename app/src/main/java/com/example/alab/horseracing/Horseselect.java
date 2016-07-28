@@ -76,34 +76,53 @@ public class Horseselect extends AppCompatActivity {
         plus2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moneyText2 += 100;
-                text2.setText(""+moneyText2+"$");
+                if(seedM > 0) {
+                    moneyText2 += 100;
+                    seedM -= 100;
+                    text2.setText("" + moneyText2 + "$");
+                    seedText.setText(""+seedM+"$");
+                }
             }
         });
 
         plus3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moneyText3 += 100;
-                text3.setText(""+moneyText3+"$");
+                if(seedM > 0) {
+                    moneyText3 += 100;
+                    seedM -= 100;
+                    text3.setText("" + moneyText3 + "$");
+                    seedText.setText(""+seedM+"$");
+                }
             }
         });
+
 
         plus4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moneyText4 += 100;
-                text4.setText(""+moneyText4+"$");
+                if(seedM > 0) {
+                    moneyText4 += 100;
+                    seedM -= 100;
+                    text4.setText("" + moneyText4 + "$");
+                    seedText.setText(""+seedM+"$");
+                }
             }
         });
+
 
         plus5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moneyText5 += 100;
-                text5.setText(""+moneyText5+"$");
+                if(seedM > 0) {
+                    moneyText5 += 100;
+                    seedM -= 100;
+                    text5.setText("" + moneyText5 + "$");
+                    seedText.setText(""+seedM+"$");
+                }
             }
         });
+
 
         min1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,17 +141,20 @@ public class Horseselect extends AppCompatActivity {
             public void onClick(View v) {
                 if (moneyText2 > 0) {
                     moneyText2 -= 100;
+                    seedM += 100;
                     text2.setText(""+moneyText2+"$");
+                    seedText.setText(""+seedM+"$");
                 }
             }
         });
-
         min3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (moneyText3 > 0) {
                     moneyText3 -= 100;
+                    seedM += 100;
                     text3.setText(""+moneyText3+"$");
+                    seedText.setText(""+seedM+"$");
                 }
             }
         });
@@ -142,7 +164,9 @@ public class Horseselect extends AppCompatActivity {
             public void onClick(View v) {
                 if (moneyText4 > 0) {
                     moneyText4 -= 100;
+                    seedM += 100;
                     text4.setText(""+moneyText4+"$");
+                    seedText.setText(""+seedM+"$");
                 }
             }
         });
@@ -152,7 +176,9 @@ public class Horseselect extends AppCompatActivity {
             public void onClick(View v) {
                 if (moneyText5 > 0) {
                     moneyText5 -= 100;
+                    seedM += 100;
                     text5.setText(""+moneyText5+"$");
+                    seedText.setText(""+seedM+"$");
                 }
             }
         });
