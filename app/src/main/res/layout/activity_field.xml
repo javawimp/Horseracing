@@ -8,6 +8,13 @@
     tools:context="com.example.alab.horseracing.Field">
 
     <ImageView
+        android:layout_width="10dp"
+        android:layout_height="420dp"
+        android:src="@drawable/endline"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="480dp"/>
+
+    <ImageView
         android:id="@+id/racehorse1"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -48,6 +55,7 @@
         android:layout_marginLeft="10dp"/>
 
     <TextView
+        android:id="@+id/rankText"
         android:layout_width="80dp"
         android:layout_height="120dp"
         android:background="@drawable/text_background"
@@ -58,12 +66,7 @@
         android:layout_marginLeft="505dp"/>
 
 
-    <ImageView
-        android:layout_width="10dp"
-        android:layout_height="420dp"
-        android:src="@drawable/endline"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="480dp"/>
+
 
     <ImageButton
         android:id="@+id/startbutton1"
