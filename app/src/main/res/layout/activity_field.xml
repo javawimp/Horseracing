@@ -8,6 +8,49 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/racing_course"
     tools:context="com.example.alab.horseracing.Field">
+
+    <ImageView
+        android:id="@+id/racehorse1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/racehorse"/>
+
+    <ImageView
+        android:id="@+id/racehorse2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/racehorse"
+        android:layout_below="@+id/racehorse1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/racehorse3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/racehorse"
+        android:layout_below="@+id/racehorse2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/racehorse4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/racehorse"
+        android:layout_below="@+id/racehorse3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/racehorse5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/racehorse"
+        android:layout_below="@+id/racehorse4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

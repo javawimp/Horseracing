@@ -11,10 +11,22 @@
     android:background="@drawable/intro"
     tools:context="com.example.alab.horseracing.MainActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Horse Racing"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textAllCaps="false"/>
+
+    <ImageButton
+        android:id="@+id/startbutton"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/startbutton"/>
 
 
 </RelativeLayout>
