@@ -18,7 +18,14 @@ public class Field extends AppCompatActivity {
     TextView rank;
     int a = 1;
     Field fieldact = this;
-    boolean pause = true;
+
+    boolean pause;
+    boolean ho1 = false;
+    boolean ho2 = false;
+    boolean ho3 = false;
+    boolean ho4 = false;
+    boolean ho5 = false;
+    boolean arrive = false;
 
     ImageView horse1;
     ImageView horse2;
@@ -35,13 +42,19 @@ public class Field extends AppCompatActivity {
 
     Random rand;
 
+    ImageButton startbt;
+    ImageButton resultbt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_field);
 
-        ImageButton button1 = (ImageButton) findViewById(R.id.resultbutton);
-        button1.setOnClickListener(new View.OnClickListener() {
+        pause = false;
+
+        resultbt = (ImageButton) findViewById(R.id.resultbutton);
+        resultbt.setX(2000);
+        resultbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Field.this, Score.class);
@@ -50,7 +63,18 @@ public class Field extends AppCompatActivity {
             }
         });
 
+        startbt = (ImageButton) findViewById(R.id.startbutton1);
+        startbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               pause = true;
+                startbt.setX(2000);
+            }
+        });
+
         rank = (TextView) findViewById(R.id.rankText);
+        rank.setText("  1st" +"\n" +"  2nd"+"\n" +"  3rd"+"\n" +"  4th"+"\n" +"  5th");
+
         a = 1;
 
         horse1 = (ImageView) findViewById(R.id.racehorse1);
@@ -62,6 +86,7 @@ public class Field extends AppCompatActivity {
         rand = new Random();
         addmove = rand.nextInt(10)+6;
 
+
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
 
@@ -72,41 +97,48 @@ public class Field extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (pause == true) {
-                            a += 1;
-                            rank.setText("" + a + horse1.getX());
                             addmove = rand.nextInt(30)+1;
                             move1 += addmove;
                             horse1.setX(move1);
                             if (horse1.getX() > 900){
-                                pause = false;
+                                horse1.setX(900);
+                                ho1 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move2 += addmove;
                             horse2.setX(move2);
                             if (horse2.getX() > 900){
-                                pause = false;
+                                horse2.setX(900);
+                                ho2 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move3 += addmove;
                             horse3.setX(move3);
                             if (horse3.getX() > 900){
-                                pause = false;
+                                horse3.setX(900);
+                                ho3 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move4 += addmove;
                             horse4.setX(move4);
                             if (horse4.getX() > 900){
-                                pause = false;
+                                horse4.setX(900);
+                                ho4 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move5 += addmove;
                             horse5.setX(move5);
                             if (horse5.getX() > 900){
+                                horse5.setX(900);
+                                ho5 = true;
+                            }
+                            if(ho1 == true &&ho2 == true &&ho3 == true &&ho4 == true &&ho5 == true){
                                 pause = false;
+                                resultbt.setX(1050);
                             }
                         }
                     }
