@@ -11,4 +11,15 @@
     android:background="@drawable/winner"
     tools:context="com.example.alab.horseracing.Score">
 
+    <ImageButton
+        android:id="@+id/again"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/again"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
