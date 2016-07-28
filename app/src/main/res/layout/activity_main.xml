@@ -24,8 +24,8 @@
 
     <ImageButton
         android:id="@+id/startbutton"
-        android:layout_width="96dp"
-        android:layout_height="64dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         android:src="@drawable/startbutton"
