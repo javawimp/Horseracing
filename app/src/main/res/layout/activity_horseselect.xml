@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/relativeLayout">
 
         <ImageView
@@ -82,7 +82,8 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/relativeLayout"
         android:layout_alignLeft="@+id/relativeLayout"
-        android:layout_alignStart="@+id/relativeLayout">
+        android:layout_alignStart="@+id/relativeLayout"
+        android:id="@+id/relativeLayout2">
 
         <ImageView
             android:id="@+id/horse2"
@@ -137,9 +138,9 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout2"
-        android:layout_alignTop="@+id/relativeLayout"
-        android:layout_centerHorizontal="true">
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/relativeLayout3">
 
         <ImageView
             android:id="@+id/horse3"
@@ -190,4 +191,142 @@
             android:src="@drawable/minusbutton" />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/relativeLayout2"
+        android:layout_alignLeft="@+id/relativeLayout3"
+        android:layout_alignStart="@+id/relativeLayout3"
+        android:id="@+id/relativeLayout5">
+
+        <ImageView
+            android:id="@+id/horse4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/horse" />
+
+        <TextView
+            android:id="@+id/stats4"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:text="Speed          7\nStamina      7\nCondition    7\nWin Rate"
+            android:layout_marginLeft="95dp"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:background="@drawable/text_background"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/money4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0$"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="55dp"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/plusbutton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/plusbutton"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="95dp" />
+
+
+        <ImageButton
+            android:id="@+id/minusbutton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="140dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/minusbutton" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="390dp"
+        android:id="@+id/relativeLayout4">
+
+        <ImageView
+            android:id="@+id/horse5"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/horse" />
+
+        <TextView
+            android:id="@+id/stats5"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:text="Speed          7\nStamina      7\nCondition    7\nWin Rate"
+            android:layout_marginLeft="95dp"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:background="@drawable/text_background"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/money5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0$"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="55dp"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/plusbutton5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/plusbutton"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="95dp" />
+
+        <ImageButton
+            android:id="@+id/minusbutton5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="140dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/minusbutton" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0$"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="500dp"
+        android:textColor="#000000"
+        android:textSize="45sp" />
+
+    <ImageButton
+        android:id="@+id/nextbutton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/nextbutton"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="450dp"/>
+
 </RelativeLayout>

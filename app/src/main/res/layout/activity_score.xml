@@ -18,8 +18,7 @@
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         android:src="@drawable/again"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="255dp"
+        android:layout_marginLeft="405dp"/>
 
 </RelativeLayout>
