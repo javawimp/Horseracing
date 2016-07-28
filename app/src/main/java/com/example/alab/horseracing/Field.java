@@ -42,6 +42,9 @@ public class Field extends AppCompatActivity {
 
     Random rand;
 
+    String [] rankSt = new String[5];
+    int rankNum= 0;
+
     ImageButton startbt;
     ImageButton resultbt;
 
@@ -51,6 +54,7 @@ public class Field extends AppCompatActivity {
         setContentView(R.layout.activity_field);
 
         pause = false;
+//        rankSt[5] = new String();
 
         resultbt = (ImageButton) findViewById(R.id.resultbutton);
         resultbt.setX(2000);
@@ -100,45 +104,77 @@ public class Field extends AppCompatActivity {
                             addmove = rand.nextInt(30)+1;
                             move1 += addmove;
                             horse1.setX(move1);
-                            if (horse1.getX() > 900){
+                            if (ho1 == false) {
+                                if (horse1.getX() > 900) {
+                                    horse1.setX(900);
+                                    ho1 = true;
+                                    rankSt[rankNum] = "Hor1";
+                                    rankNum++;
+                                }
+                            }else if(horse1.getX() > 900){
                                 horse1.setX(900);
-                                ho1 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move2 += addmove;
                             horse2.setX(move2);
-                            if (horse2.getX() > 900){
+                            if (ho2 == false) {
+                                if (horse2.getX() > 900) {
+                                    horse2.setX(900);
+                                    ho2 = true;
+                                    rankSt[rankNum] = "Hor2";
+                                    rankNum++;
+                                }
+                            }else if(horse2.getX() > 900){
                                 horse2.setX(900);
-                                ho2 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move3 += addmove;
                             horse3.setX(move3);
-                            if (horse3.getX() > 900){
+                            if (ho3 == false) {
+                                if (horse3.getX() > 900) {
+                                    horse3.setX(900);
+                                    ho3 = true;
+                                    rankSt[rankNum] = "Hor3";
+                                    rankNum++;
+                                }
+                            }else if(horse3.getX() > 900){
                                 horse3.setX(900);
-                                ho3 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move4 += addmove;
                             horse4.setX(move4);
-                            if (horse4.getX() > 900){
+                            if (ho4 == false) {
+                                if (horse4.getX() > 900) {
+                                    horse4.setX(900);
+                                    ho4 = true;
+                                    rankSt[rankNum] = "Hor4";
+                                    rankNum++;
+                                }
+                            }else if(horse4.getX() > 900){
                                 horse4.setX(900);
-                                ho4 = true;
                             }
 
                             addmove = rand.nextInt(30)+1;
                             move5 += addmove;
                             horse5.setX(move5);
-                            if (horse5.getX() > 900){
+                            if (ho5 == false) {
+                                if (horse5.getX() > 900) {
+                                    horse5.setX(900);
+                                    ho5 = true;
+                                    rankSt[rankNum] = "Hor5";
+                                    rankNum++;
+                                }
+                            }else if(horse5.getX() > 900){
                                 horse5.setX(900);
-                                ho5 = true;
                             }
+
                             if(ho1 == true &&ho2 == true &&ho3 == true &&ho4 == true &&ho5 == true){
                                 pause = false;
                                 resultbt.setX(1050);
+                                rank.setText(" 1st   " +rankSt[0]+"\n" +" 2nd  "+rankSt[1]+"\n" +" 3rd  "+rankSt[2]+"\n" +" 4th  "+rankSt[3]+"\n" +" 5th  "+rankSt[4]);
                             }
                         }
                     }
