@@ -47,10 +47,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0$"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="55dp"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_alignTop="@+id/plusbutton1"
+            android:layout_alignRight="@+id/horse1"
+            android:layout_alignEnd="@+id/horse1" />
 
 
         <ImageButton
@@ -108,10 +109,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0$"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="55dp"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_alignBottom="@+id/plusbutton2"
+            android:layout_alignRight="@+id/horse2"
+            android:layout_alignEnd="@+id/horse2" />
 
         <ImageButton
             android:id="@+id/plusbutton2"
@@ -165,10 +167,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0$"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="55dp"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_alignTop="@+id/plusbutton3"
+            android:layout_alignRight="@+id/horse3"
+            android:layout_alignEnd="@+id/horse3" />
 
         <ImageButton
             android:id="@+id/plusbutton3"
@@ -223,10 +226,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0$"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="55dp"
+            android:gravity="left"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_alignTop="@+id/plusbutton4"
+            android:layout_alignRight="@+id/horse4"
+            android:layout_alignEnd="@+id/horse4" />
 
         <ImageButton
             android:id="@+id/plusbutton4"
@@ -281,10 +286,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0$"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="55dp"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_alignTop="@+id/plusbutton5"
+            android:layout_alignRight="@+id/horse5"
+            android:layout_alignEnd="@+id/horse5" />
 
         <ImageButton
             android:id="@+id/plusbutton5"
@@ -314,10 +320,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0$"
-        android:layout_marginTop="230dp"
-        android:layout_marginLeft="500dp"
+        android:layout_marginTop="39dp"
         android:textColor="#000000"
-        android:textSize="45sp" />
+        android:textSize="45sp"
+        android:layout_alignTop="@+id/relativeLayout5"
+        android:layout_alignRight="@+id/relativeLayout4"
+        android:layout_alignEnd="@+id/relativeLayout4" />
 
     <ImageButton
         android:id="@+id/nextbutton"
