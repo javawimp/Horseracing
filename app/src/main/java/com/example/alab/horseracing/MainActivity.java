@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton button = (ImageButton) findViewById(R.id.startbutton);
-        button.setOnClickListener(new View.OnClickListener() {
+        ImageButton button1 = (ImageButton) findViewById(R.id.startbutton);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Horseselect.class);
