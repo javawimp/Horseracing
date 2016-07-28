@@ -19,6 +19,7 @@ public class Horseselect extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Horseselect.this, Field.class);
                 startActivity(intent);
+                finish();
             }
         });
 

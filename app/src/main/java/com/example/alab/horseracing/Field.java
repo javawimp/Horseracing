@@ -19,6 +19,7 @@ public class Field extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Field.this, Score.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

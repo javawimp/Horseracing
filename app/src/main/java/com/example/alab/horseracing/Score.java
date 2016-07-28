@@ -19,6 +19,7 @@ public class Score extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Score.this, Horseselect.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
