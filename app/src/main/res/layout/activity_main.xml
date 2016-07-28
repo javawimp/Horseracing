@@ -18,7 +18,9 @@
         android:text="Horse Racing"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:id="@+id/startbutton"
@@ -26,7 +28,10 @@
         android:layout_height="64dp"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
-        android:src="@drawable/startbutton"/>
+        android:src="@drawable/startbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp" />
 
 
 </RelativeLayout>
