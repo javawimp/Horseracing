@@ -12,7 +12,7 @@
     tools:context="com.example.alab.horseracing.Score">
 
     <ImageButton
-        android:id="@+id/again"
+        android:id="@+id/againbutton"
         android:layout_width="96dp"
         android:layout_height="64dp"
         android:scaleType="centerCrop"
