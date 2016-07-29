@@ -41,6 +41,12 @@ public class Field extends AppCompatActivity {
     int move4 = 0;
     int move5 = 0;
 
+    double value1 = 0;
+    double value2 = 0;
+    double value3 = 0;
+    double value4 = 0;
+    double value5 = 0;
+
     Random rand;
 
     String [] rankSt = new String[5];
@@ -58,11 +64,11 @@ public class Field extends AppCompatActivity {
 //        rankSt[5] = new String();
 
         Bundle bundle = getIntent().getExtras();
-        int value1 = bundle.getInt("HorseOne");
-        int value2 = bundle.getInt("HorseTwo");
-        int value3 = bundle.getInt("HorseThree");
-        int value4 = bundle.getInt("HorseFour");
-        int value5 = bundle.getInt("HorseFive");
+        value1 = bundle.getInt("HorseOne");   //horse 1
+        value2 = bundle.getInt("HorseTwo");   //horse 2
+        value3 = bundle.getInt("HorseThree"); //horse 3
+        value4 = bundle.getInt("HorseFour");  //horse 4
+        value5 = bundle.getInt("HorseFive");  //horse 5
 
         resultbt = (ImageButton) findViewById(R.id.resultbutton);
         resultbt.setX(2000);
@@ -120,6 +126,18 @@ public class Field extends AppCompatActivity {
                                     horse1.setX(900);
                                     ho1 = true;
                                     rankSt[rankNum] = "Horse 01";
+
+                                    if(rankNum == 0)
+                                        value1 = value1 * 2;
+                                    else if(rankNum == 1)
+                                        value1 = value1 * 0.7;
+                                    else if(rankNum == 2)
+                                        value1 = value1 * 0.3;
+                                    else if(rankNum == 3)
+                                        value1 = value1 * 0.1;
+                                    else if(rankNum == 4)
+                                        value1 = 0;
+
                                     rankNum++;
                                 }
                             }else if(horse1.getX() > 900){
@@ -134,6 +152,18 @@ public class Field extends AppCompatActivity {
                                     horse2.setX(900);
                                     ho2 = true;
                                     rankSt[rankNum] = "Horse 02";
+
+                                    if(rankNum == 0)
+                                        value2 = value2 * 2;
+                                    else if(rankNum == 1)
+                                        value2 = value2 * 0.7;
+                                    else if(rankNum == 2)
+                                        value2 = value2 * 0.3;
+                                    else if(rankNum == 3)
+                                        value2 = value2 * 0.1;
+                                    else if(rankNum == 4)
+                                        value2 = 0;
+
                                     rankNum++;
                                 }
                             }else if(horse2.getX() > 900){
@@ -148,6 +178,18 @@ public class Field extends AppCompatActivity {
                                     horse3.setX(900);
                                     ho3 = true;
                                     rankSt[rankNum] = "Horse 03";
+
+                                    if(rankNum == 0)
+                                        value3 = value3 * 2;
+                                    else if(rankNum == 1)
+                                        value3 = value3 * 0.7;
+                                    else if(rankNum == 2)
+                                        value3 = value3 * 0.3;
+                                    else if(rankNum == 3)
+                                        value3 = value3 * 0.1;
+                                    else if(rankNum == 4)
+                                        value3 = 0;
+
                                     rankNum++;
                                 }
                             }else if(horse3.getX() > 900){
@@ -162,6 +204,18 @@ public class Field extends AppCompatActivity {
                                     horse4.setX(900);
                                     ho4 = true;
                                     rankSt[rankNum] = "Horse 04";
+
+                                    if(rankNum == 0)
+                                        value4 = value4 * 2;
+                                    else if(rankNum == 1)
+                                        value4 = value4 * 0.7;
+                                    else if(rankNum == 2)
+                                        value4 = value4 * 0.3;
+                                    else if(rankNum == 3)
+                                        value4 = value4 * 0.1;
+                                    else if(rankNum == 4)
+                                        value4 = 0;
+
                                     rankNum++;
                                 }
                             }else if(horse4.getX() > 900){
@@ -176,6 +230,18 @@ public class Field extends AppCompatActivity {
                                     horse5.setX(900);
                                     ho5 = true;
                                     rankSt[rankNum] = "Horse 05";
+
+                                    if(rankNum == 0)
+                                        value5 = value5 * 2;
+                                    else if(rankNum == 1)
+                                        value5 = value5 * 0.7;
+                                    else if(rankNum == 2)
+                                        value5 = value5 * 0.3;
+                                    else if(rankNum == 3)
+                                        value5 = value5 * 0.1;
+                                    else if(rankNum == 4)
+                                        value5 = 0;
+
                                     rankNum++;
                                 }
                             }else if(horse5.getX() > 900){
@@ -185,8 +251,8 @@ public class Field extends AppCompatActivity {
                             if(ho1 == true && ho2 == true && ho3 == true && ho4 == true && ho5 == true){
                                 pause = false;
                                 resultbt.setX(1050);
-                                rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
-
+                                //rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
+                                rank.setText("\n" + "  1st:   " + value1 + "\n" +"  2nd:  "+ value2+ "\n" + "  3rd:   " + value3+ "\n" + "  4th:   "+value4 + "\n" + "  5th:   " + value5);
                             }
                         }
                     }
