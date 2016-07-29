@@ -174,7 +174,7 @@ public class Field extends AppCompatActivity {
                             if(ho1 == true && ho2 == true && ho3 == true && ho4 == true && ho5 == true){
                                 pause = false;
                                 resultbt.setX(1050);
-                                rank.setText("\n" + " 1st:   " + rankSt[0] + "\n" +" 2nd:  "+ rankSt[1]+ "\n" + " 3rd:  " + rankSt[2]+ "\n" + " 4th:  "+rankSt[3] + "\n" + " 5th:  " + rankSt[4]);
+                                rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
                             }
                         }
                     }
