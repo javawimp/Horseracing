@@ -56,12 +56,12 @@
         android:layout_marginLeft="235dp"/>
 
     <ImageView
-        android:id="@+id/winninghorse"
-        android:layout_width="150dp"
-        android:layout_height="160dp"
+        android:id="@+id/championhorse"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
         android:src="@drawable/champion_racehorse"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="50dp"/>
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="45dp"/>
 
     <ImageButton
         android:id="@+id/againbutton"
