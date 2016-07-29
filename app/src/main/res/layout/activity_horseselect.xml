@@ -399,6 +399,6 @@
         android:background="@android:color/transparent"
         android:src="@drawable/nextbutton"
         android:layout_marginTop="290dp"
-        android:layout_marginLeft="450dp"/>
+        android:layout_marginLeft="475dp"/>
 
 </RelativeLayout>
