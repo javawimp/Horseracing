@@ -214,8 +214,5 @@ public class Horseselect extends AppCompatActivity {
         condition = (rand.nextInt(5)+6)*10;
         textInfo5.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
 
-
-
-
    }
 }
