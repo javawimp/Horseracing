@@ -32,16 +32,6 @@ public class Horseselect extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horseselect);
 
-        ImageButton button2 = (ImageButton) findViewById(R.id.nextbutton);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Horseselect.this, Field.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
         ImageButton plus1 = (ImageButton) findViewById(R.id.plusbutton1);
         ImageButton plus2 = (ImageButton) findViewById(R.id.plusbutton2);
         ImageButton plus3 = (ImageButton) findViewById(R.id.plusbutton3);
@@ -59,6 +49,23 @@ public class Horseselect extends AppCompatActivity {
         text3 = (TextView) findViewById(R.id.money3);
         text4 = (TextView) findViewById(R.id.money4);
         text5 = (TextView) findViewById(R.id.money5);
+
+        ImageButton button2 = (ImageButton) findViewById(R.id.nextbutton);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Horseselect.this, Field.class);
+                intent.putExtra("HorseOne",moneyText1);
+                intent.putExtra("HorseTwo",moneyText2);
+                intent.putExtra("HorseThree",moneyText3);
+                intent.putExtra("HorseFour",moneyText4);
+                intent.putExtra("HorseFive",moneyText5);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
         seedText = (TextView) findViewById(R.id.total);
         seedText.setText("" + seedM + "$");

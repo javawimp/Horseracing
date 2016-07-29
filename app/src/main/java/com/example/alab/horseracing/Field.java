@@ -57,6 +57,13 @@ public class Field extends AppCompatActivity {
         pause = false;
 //        rankSt[5] = new String();
 
+        Bundle bundle = getIntent().getExtras();
+        int value1 = bundle.getInt("HorseOne");
+        int value2 = bundle.getInt("HorseTwo");
+        int value3 = bundle.getInt("HorseThree");
+        int value4 = bundle.getInt("HorseFour");
+        int value5 = bundle.getInt("HorseFive");
+
         resultbt = (ImageButton) findViewById(R.id.resultbutton);
         resultbt.setX(2000);
         resultbt.setOnClickListener(new View.OnClickListener() {
@@ -179,6 +186,7 @@ public class Field extends AppCompatActivity {
                                 pause = false;
                                 resultbt.setX(1050);
                                 rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
+
                             }
                         }
                     }
