@@ -180,7 +180,7 @@ public class Field extends AppCompatActivity {
                     }
                 });
             }
-        }, 0, 350);
+        }, 0, 320);
     }
 }
 
