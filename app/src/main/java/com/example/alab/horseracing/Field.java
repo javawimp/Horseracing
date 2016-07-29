@@ -88,7 +88,7 @@ public class Field extends AppCompatActivity {
         horse5 = (ImageView) findViewById(R.id.racehorse5);
 
         rand = new Random();
-        addmove = rand.nextInt(36) + 1;
+        addmove = rand.nextInt(101) + 5;
 
 
         Timer timer = new Timer();
@@ -101,7 +101,7 @@ public class Field extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (pause == true) {
-                            addmove = rand.nextInt(36) + 1;
+                            addmove = rand.nextInt(101) + 5;
                             move1 += addmove;
                             horse1.setX(move1);
                             if (ho1 == false) {
@@ -115,7 +115,7 @@ public class Field extends AppCompatActivity {
                                 horse1.setX(900);
                             }
 
-                            addmove = rand.nextInt(36) + 1;
+                            addmove = rand.nextInt(101) + 5;
                             move2 += addmove;
                             horse2.setX(move2);
                             if (ho2 == false) {
@@ -129,7 +129,7 @@ public class Field extends AppCompatActivity {
                                 horse2.setX(900);
                             }
 
-                            addmove = rand.nextInt(36) + 1;
+                            addmove = rand.nextInt(101) + 5;
                             move3 += addmove;
                             horse3.setX(move3);
                             if (ho3 == false) {
@@ -143,7 +143,7 @@ public class Field extends AppCompatActivity {
                                 horse3.setX(900);
                             }
 
-                            addmove = rand.nextInt(36) + 1;
+                            addmove = rand.nextInt(101) + 5;
                             move4 += addmove;
                             horse4.setX(move4);
                             if (ho4 == false) {
@@ -157,7 +157,7 @@ public class Field extends AppCompatActivity {
                                 horse4.setX(900);
                             }
 
-                            addmove = rand.nextInt(36) + 1;
+                            addmove = rand.nextInt(101) + 5;
                             move5 += addmove;
                             horse5.setX(move5);
                             if (ho5 == false) {
@@ -180,7 +180,7 @@ public class Field extends AppCompatActivity {
                     }
                 });
             }
-        }, 0, 100);
+        }, 0, 350);
     }
 }
 
