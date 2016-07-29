@@ -108,7 +108,7 @@ public class Field extends AppCompatActivity {
                                 if (horse1.getX() > 900) {
                                     horse1.setX(900);
                                     ho1 = true;
-                                    rankSt[rankNum] = "Hor1";
+                                    rankSt[rankNum] = "Horse01";
                                     rankNum++;
                                 }
                             }else if(horse1.getX() > 900){
@@ -122,7 +122,7 @@ public class Field extends AppCompatActivity {
                                 if (horse2.getX() > 900) {
                                     horse2.setX(900);
                                     ho2 = true;
-                                    rankSt[rankNum] = "Hor2";
+                                    rankSt[rankNum] = "Horse02";
                                     rankNum++;
                                 }
                             }else if(horse2.getX() > 900){
@@ -136,7 +136,7 @@ public class Field extends AppCompatActivity {
                                 if (horse3.getX() > 900) {
                                     horse3.setX(900);
                                     ho3 = true;
-                                    rankSt[rankNum] = "Hor3";
+                                    rankSt[rankNum] = "Horse03";
                                     rankNum++;
                                 }
                             }else if(horse3.getX() > 900){
@@ -150,7 +150,7 @@ public class Field extends AppCompatActivity {
                                 if (horse4.getX() > 900) {
                                     horse4.setX(900);
                                     ho4 = true;
-                                    rankSt[rankNum] = "Hor4";
+                                    rankSt[rankNum] = "Horse04";
                                     rankNum++;
                                 }
                             }else if(horse4.getX() > 900){
@@ -164,7 +164,7 @@ public class Field extends AppCompatActivity {
                                 if (horse5.getX() > 900) {
                                     horse5.setX(900);
                                     ho5 = true;
-                                    rankSt[rankNum] = "Hor5";
+                                    rankSt[rankNum] = "Horse05";
                                     rankNum++;
                                 }
                             }else if(horse5.getX() > 900){
@@ -174,7 +174,7 @@ public class Field extends AppCompatActivity {
                             if(ho1 == true &&ho2 == true &&ho3 == true &&ho4 == true &&ho5 == true){
                                 pause = false;
                                 resultbt.setX(1050);
-                                rank.setText(" 1st   " +rankSt[0]+"\n" +" 2nd  "+rankSt[1]+"\n" +" 3rd  "+rankSt[2]+"\n" +" 4th  "+rankSt[3]+"\n" +" 5th  "+rankSt[4]);
+                                rank.setText(" 1st:   " +rankSt[0]+"\n" +" 2nd:  "+rankSt[1]+"\n" +" 3rd:  "+rankSt[2]+"\n" +" 4th:  "+rankSt[3]+"\n" +" 5th:  "+rankSt[4]);
                             }
                         }
                     }

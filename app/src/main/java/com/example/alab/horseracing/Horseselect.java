@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class Horseselect extends AppCompatActivity {
+
     int moneyText1 = 0;
     int moneyText2 = 0;
     int moneyText3 = 0;
@@ -25,6 +26,7 @@ public class Horseselect extends AppCompatActivity {
     TextView seedText;
 
     int seedM = 1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +61,7 @@ public class Horseselect extends AppCompatActivity {
         text5 = (TextView) findViewById(R.id.money5);
 
         seedText = (TextView) findViewById(R.id.total);
-        seedText.setText(""+seedM+"$");
+        seedText.setText("" + seedM + "$");
 
         plus1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +70,7 @@ public class Horseselect extends AppCompatActivity {
                     moneyText1 += 100;
                     seedM -= 100;
                     text1.setText("" + moneyText1 + "$");
-                    seedText.setText(""+seedM+"$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -80,7 +82,7 @@ public class Horseselect extends AppCompatActivity {
                     moneyText2 += 100;
                     seedM -= 100;
                     text2.setText("" + moneyText2 + "$");
-                    seedText.setText(""+seedM+"$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -92,7 +94,7 @@ public class Horseselect extends AppCompatActivity {
                     moneyText3 += 100;
                     seedM -= 100;
                     text3.setText("" + moneyText3 + "$");
-                    seedText.setText(""+seedM+"$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -105,7 +107,7 @@ public class Horseselect extends AppCompatActivity {
                     moneyText4 += 100;
                     seedM -= 100;
                     text4.setText("" + moneyText4 + "$");
-                    seedText.setText(""+seedM+"$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -118,7 +120,7 @@ public class Horseselect extends AppCompatActivity {
                     moneyText5 += 100;
                     seedM -= 100;
                     text5.setText("" + moneyText5 + "$");
-                    seedText.setText(""+seedM+"$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -130,8 +132,8 @@ public class Horseselect extends AppCompatActivity {
                 if (moneyText1 > 0) {
                     moneyText1 -= 100;
                     seedM += 100;
-                    text1.setText(""+moneyText1+"$");
-                    seedText.setText(""+seedM+"$");
+                    text1.setText("" + moneyText1 + "$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -142,8 +144,8 @@ public class Horseselect extends AppCompatActivity {
                 if (moneyText2 > 0) {
                     moneyText2 -= 100;
                     seedM += 100;
-                    text2.setText(""+moneyText2+"$");
-                    seedText.setText(""+seedM+"$");
+                    text2.setText("" + moneyText2 + "$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -153,8 +155,8 @@ public class Horseselect extends AppCompatActivity {
                 if (moneyText3 > 0) {
                     moneyText3 -= 100;
                     seedM += 100;
-                    text3.setText(""+moneyText3+"$");
-                    seedText.setText(""+seedM+"$");
+                    text3.setText("" + moneyText3 + "$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -165,8 +167,8 @@ public class Horseselect extends AppCompatActivity {
                 if (moneyText4 > 0) {
                     moneyText4 -= 100;
                     seedM += 100;
-                    text4.setText(""+moneyText4+"$");
-                    seedText.setText(""+seedM+"$");
+                    text4.setText("" + moneyText4 + "$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -177,8 +179,8 @@ public class Horseselect extends AppCompatActivity {
                 if (moneyText5 > 0) {
                     moneyText5 -= 100;
                     seedM += 100;
-                    text5.setText(""+moneyText5+"$");
-                    seedText.setText(""+seedM+"$");
+                    text5.setText("" + moneyText5 + "$");
+                    seedText.setText("" + seedM + "$");
                 }
             }
         });
@@ -189,28 +191,28 @@ public class Horseselect extends AppCompatActivity {
         TextView textInfo4 = (TextView) findViewById(R.id.stats4);
         TextView textInfo5 = (TextView) findViewById(R.id.stats5);
         Random rand = new Random();
-        int speed1 = (rand.nextInt(5)+6)*10;
-        int stamina1 = (rand.nextInt(5)+6)*10;
+        int speed = (rand.nextInt(5)+6)*10;
+        int stamina = (rand.nextInt(5)+6)*10;
         int condition = (rand.nextInt(5)+6)*10;
         int winRate = 10 ;
 
-        textInfo1.setText("\n"+"   Spd        "+speed1+"\n"+"   Stm        "+stamina1+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
-        speed1 = (rand.nextInt(5)+6)*10;
-        stamina1 = (rand.nextInt(5)+6)*10;
+        textInfo1.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        speed = (rand.nextInt(5)+6)*10;
+        stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
-        textInfo2.setText("\n"+"   Spd        "+speed1+"\n"+"   Stm        "+stamina1+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
-        speed1 = (rand.nextInt(5)+6)*10;
-        stamina1 = (rand.nextInt(5)+6)*10;
+        textInfo2.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        speed = (rand.nextInt(5)+6)*10;
+        stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
-        textInfo3.setText("\n"+"   Spd        "+speed1+"\n"+"   Stm        "+stamina1+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
-        speed1 = (rand.nextInt(5)+6)*10;
-        stamina1 = (rand.nextInt(5)+6)*10;
+        textInfo3.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        speed = (rand.nextInt(5)+6)*10;
+        stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
-        textInfo4.setText("\n"+"   Spd        "+speed1+"\n"+"   Stm        "+stamina1+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
-        speed1 = (rand.nextInt(5)+6)*10;
-        stamina1 = (rand.nextInt(5)+6)*10;
+        textInfo4.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        speed = (rand.nextInt(5)+6)*10;
+        stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
-        textInfo5.setText("\n"+"   Spd        "+speed1+"\n"+"   Stm        "+stamina1+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        textInfo5.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
 
 
 
