@@ -14,9 +14,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Winner"
+        android:text="Champion Horse"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textAllCaps="false"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
@@ -59,7 +59,7 @@
         android:id="@+id/winninghorse"
         android:layout_width="150dp"
         android:layout_height="160dp"
-        android:src="@drawable/winninghorse"
+        android:src="@drawable/champion_racehorse"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="50dp"/>
 
