@@ -25,7 +25,7 @@ public class Horseselect extends AppCompatActivity {
 
     TextView seedText;
 
-    int seedM = 1000;
+    int seedM = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
