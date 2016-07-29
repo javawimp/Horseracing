@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Horse Racing"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="45sp"
         android:textAllCaps="false"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
