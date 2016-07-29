@@ -8,11 +8,12 @@
     tools:context="com.example.alab.horseracing.Field">
 
     <ImageView
+        android:id="@+id/endLine"
         android:layout_width="10dp"
         android:layout_height="420dp"
         android:src="@drawable/endline"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="485dp"/>
+        android:layout_marginLeft="20dp"/>
 
     <ImageView
         android:id="@+id/racehorse1"

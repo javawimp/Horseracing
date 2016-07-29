@@ -32,6 +32,7 @@ public class Field extends AppCompatActivity {
     ImageView horse3;
     ImageView horse4;
     ImageView horse5;
+    ImageView lineEnd;
 
     int addmove;
     int move1 = 0;
@@ -86,6 +87,9 @@ public class Field extends AppCompatActivity {
         horse3 = (ImageView) findViewById(R.id.racehorse3);
         horse4 = (ImageView) findViewById(R.id.racehorse4);
         horse5 = (ImageView) findViewById(R.id.racehorse5);
+        lineEnd = (ImageView) findViewById(R.id.endLine);
+
+        lineEnd.setX(900);
 
         rand = new Random();
         addmove = rand.nextInt(101) + 5;
