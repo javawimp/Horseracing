@@ -8,6 +8,7 @@
     tools:context="com.example.alab.horseracing.Horseselect">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select the horse(s) and betting"
@@ -15,8 +16,7 @@
         android:textSize="20sp"
         android:textAllCaps="false"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -52,7 +52,18 @@
             android:textSize="30sp"
             android:layout_alignTop="@+id/plusbutton1"
             android:layout_alignRight="@+id/horse1"
-            android:layout_alignEnd="@+id/horse1" />
+            android:layout_alignEnd="@+id/horse1"/>
+
+        <TextView
+            android:id="@+id/horsename1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No.01"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/horse1"
+            android:layout_alignEnd="@+id/horse1"/>
 
 
         <ImageButton
@@ -63,7 +74,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/plusbutton"
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="95dp" />
+            android:layout_marginLeft="95dp"/>
 
         <ImageButton
             android:id="@+id/minusbutton1"
@@ -81,18 +92,16 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_alignLeft="@+id/relativeLayout"
-        android:layout_alignStart="@+id/relativeLayout"
-        android:id="@+id/relativeLayout2">
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/relativeLayout3">
 
         <ImageView
             android:id="@+id/horse2"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/horse" />
+            android:src="@drawable/horse"/>
 
         <TextView
             android:id="@+id/stats2"
@@ -103,7 +112,7 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:background="@drawable/text_background"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/money2"
@@ -112,9 +121,20 @@
             android:text="0$"
             android:textColor="#000000"
             android:textSize="30sp"
-            android:layout_alignBottom="@+id/plusbutton2"
+            android:layout_alignTop="@+id/plusbutton2"
             android:layout_alignRight="@+id/horse2"
-            android:layout_alignEnd="@+id/horse2" />
+            android:layout_alignEnd="@+id/horse2"/>
+
+        <TextView
+            android:id="@+id/horsename2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No.02"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/horse2"
+            android:layout_alignEnd="@+id/horse2"/>
 
         <ImageButton
             android:id="@+id/plusbutton2"
@@ -124,7 +144,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/plusbutton"
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="95dp" />
+            android:layout_marginLeft="95dp"/>
 
         <ImageButton
             android:id="@+id/minusbutton2"
@@ -134,7 +154,7 @@
             android:layout_marginTop="100dp"
             android:layout_marginLeft="140dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/minusbutton" />
+            android:src="@drawable/minusbutton"/>
 
     </RelativeLayout>
 
@@ -142,15 +162,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="200dp"
-        android:id="@+id/relativeLayout3">
+        android:layout_marginLeft="390dp"
+        android:id="@+id/relativeLayout4">
 
         <ImageView
             android:id="@+id/horse3"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/horse" />
+            android:src="@drawable/horse"/>
 
         <TextView
             android:id="@+id/stats3"
@@ -161,7 +181,7 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:background="@drawable/text_background"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/money3"
@@ -172,7 +192,18 @@
             android:textSize="30sp"
             android:layout_alignTop="@+id/plusbutton3"
             android:layout_alignRight="@+id/horse3"
-            android:layout_alignEnd="@+id/horse3" />
+            android:layout_alignEnd="@+id/horse3"/>
+
+        <TextView
+            android:id="@+id/horsename3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No.03"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/horse3"
+            android:layout_alignEnd="@+id/horse3"/>
 
         <ImageButton
             android:id="@+id/plusbutton3"
@@ -182,7 +213,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/plusbutton"
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="95dp" />
+            android:layout_marginLeft="95dp"/>
 
         <ImageButton
             android:id="@+id/minusbutton3"
@@ -192,7 +223,78 @@
             android:layout_marginTop="100dp"
             android:layout_marginLeft="140dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/minusbutton" />
+            android:src="@drawable/minusbutton"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignStart="@+id/relativeLayout"
+        android:id="@+id/relativeLayout2">
+
+        <ImageView
+            android:id="@+id/horse4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/horse"/>
+
+        <TextView
+            android:id="@+id/stats4"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:text="\nSpeed\nStamina\nCondition\nWin Rate"
+            android:layout_marginLeft="95dp"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:background="@drawable/text_background"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/money4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0$"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:layout_alignBottom="@+id/plusbutton4"
+            android:layout_alignRight="@+id/horse4"
+            android:layout_alignEnd="@+id/horse4"/>
+
+        <TextView
+            android:id="@+id/horsename4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No.04"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/horse4"
+            android:layout_alignEnd="@+id/horse4"/>
+
+        <ImageButton
+            android:id="@+id/plusbutton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/plusbutton"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="95dp"/>
+
+        <ImageButton
+            android:id="@+id/minusbutton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="140dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/minusbutton"/>
 
     </RelativeLayout>
 
@@ -205,71 +307,11 @@
         android:id="@+id/relativeLayout5">
 
         <ImageView
-            android:id="@+id/horse4"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/horse" />
-
-        <TextView
-            android:id="@+id/stats4"
-            android:layout_width="85dp"
-            android:layout_height="90dp"
-            android:text="\nSpeed\nStamina\nCondition\nWin Rate"
-            android:layout_marginLeft="95dp"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:background="@drawable/text_background"
-            android:textAllCaps="false" />
-
-        <TextView
-            android:id="@+id/money4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0$"
-            android:gravity="left"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:layout_alignTop="@+id/plusbutton4"
-            android:layout_alignRight="@+id/horse4"
-            android:layout_alignEnd="@+id/horse4" />
-
-        <ImageButton
-            android:id="@+id/plusbutton4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:scaleType="centerCrop"
-            android:background="@android:color/transparent"
-            android:src="@drawable/plusbutton"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="95dp" />
-
-
-        <ImageButton
-            android:id="@+id/minusbutton4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="140dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/minusbutton" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="390dp"
-        android:id="@+id/relativeLayout4">
-
-        <ImageView
             android:id="@+id/horse5"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/horse" />
+            android:src="@drawable/horse"/>
 
         <TextView
             android:id="@+id/stats5"
@@ -280,18 +322,30 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:background="@drawable/text_background"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/money5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0$"
+            android:gravity="left"
             android:textColor="#000000"
             android:textSize="30sp"
             android:layout_alignTop="@+id/plusbutton5"
             android:layout_alignRight="@+id/horse5"
-            android:layout_alignEnd="@+id/horse5" />
+            android:layout_alignEnd="@+id/horse5"/>
+
+        <TextView
+            android:id="@+id/horsename5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No.05"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/horse5"
+            android:layout_alignEnd="@+id/horse5"/>
 
         <ImageButton
             android:id="@+id/plusbutton5"
@@ -301,7 +355,8 @@
             android:background="@android:color/transparent"
             android:src="@drawable/plusbutton"
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="95dp" />
+            android:layout_marginLeft="95dp"/>
+
 
         <ImageButton
             android:id="@+id/minusbutton5"
@@ -311,10 +366,9 @@
             android:layout_marginTop="100dp"
             android:layout_marginLeft="140dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/minusbutton" />
+            android:src="@drawable/minusbutton"/>
 
     </RelativeLayout>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -335,7 +389,7 @@
         android:textSize="45sp"
         android:layout_alignTop="@+id/relativeLayout5"
         android:layout_alignRight="@+id/relativeLayout4"
-        android:layout_alignEnd="@+id/relativeLayout4" />
+        android:layout_alignEnd="@+id/relativeLayout4"/>
 
     <ImageButton
         android:id="@+id/nextbutton"

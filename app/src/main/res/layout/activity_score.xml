@@ -11,6 +11,16 @@
     android:background="@drawable/winner"
     tools:context="com.example.alab.horseracing.Score">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Winner"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textAllCaps="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
