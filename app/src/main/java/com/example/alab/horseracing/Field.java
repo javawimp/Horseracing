@@ -41,11 +41,13 @@ public class Field extends AppCompatActivity {
     int move4 = 0;
     int move5 = 0;
 
-    double value1 = 0;
-    double value2 = 0;
-    double value3 = 0;
-    double value4 = 0;
-    double value5 = 0;
+    int value1 = 0;
+    int value2 = 0;
+    int value3 = 0;
+    int value4 = 0;
+    int value5 = 0;
+
+    int seedMoney = 0;
 
     Random rand;
 
@@ -69,6 +71,7 @@ public class Field extends AppCompatActivity {
         value3 = bundle.getInt("HorseThree"); //horse 3
         value4 = bundle.getInt("HorseFour");  //horse 4
         value5 = bundle.getInt("HorseFive");  //horse 5
+        seedMoney = bundle.getInt("HorseSeed");
 
         resultbt = (ImageButton) findViewById(R.id.resultbutton);
         resultbt.setX(2000);
@@ -76,6 +79,14 @@ public class Field extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Field.this, Score.class);
+
+                intent.putExtra("HorseOneRe",value1);
+                intent.putExtra("HorseTwoRe",value2);
+                intent.putExtra("HorseThreeRe",value3);
+                intent.putExtra("HorseFourRe",value4);
+                intent.putExtra("HorseFiveRe",value5);
+                intent.putExtra("HorseSeedM",seedMoney);
+
                 startActivity(intent);
                 finish();
             }
@@ -91,7 +102,7 @@ public class Field extends AppCompatActivity {
         });
 
         rank = (TextView) findViewById(R.id.rankText);
-        rank.setText("\n" + "  1st" + "\n" +"  2nd"+ "\n" +"  3rd" + "\n" + "  4th"+ "\n" + "  5th");
+        rank.setText("\n" + "  No.1" + "\n" +"  No.2"+ "\n" +"  No.3" + "\n" + "  No.4"+ "\n" + "  No.5");
 
         a = 1;
 
@@ -128,15 +139,16 @@ public class Field extends AppCompatActivity {
                                     rankSt[rankNum] = "Horse 01";
 
                                     if(rankNum == 0)
-                                        value1 = value1 * 2;
+                                        value1 = value1 * 25/10;
                                     else if(rankNum == 1)
-                                        value1 = value1 * 0.7;
+                                        value1 = value1 * 15/10;
                                     else if(rankNum == 2)
-                                        value1 = value1 * 0.3;
+                                        value1 = value1 * 5/10;
                                     else if(rankNum == 3)
-                                        value1 = value1 * 0.1;
+                                        value1 = value1 * 2/10;
                                     else if(rankNum == 4)
                                         value1 = 0;
+
 
                                     rankNum++;
                                 }
@@ -154,13 +166,13 @@ public class Field extends AppCompatActivity {
                                     rankSt[rankNum] = "Horse 02";
 
                                     if(rankNum == 0)
-                                        value2 = value2 * 2;
+                                        value2 = value2 * 25/10;
                                     else if(rankNum == 1)
-                                        value2 = value2 * 0.7;
+                                        value2 = value2 * 15/10;
                                     else if(rankNum == 2)
-                                        value2 = value2 * 0.3;
+                                        value2 = value2 * 5/10;
                                     else if(rankNum == 3)
-                                        value2 = value2 * 0.1;
+                                        value2 = value2 * 2/10;
                                     else if(rankNum == 4)
                                         value2 = 0;
 
@@ -180,13 +192,13 @@ public class Field extends AppCompatActivity {
                                     rankSt[rankNum] = "Horse 03";
 
                                     if(rankNum == 0)
-                                        value3 = value3 * 2;
+                                        value3 = value3 * 25/10;
                                     else if(rankNum == 1)
-                                        value3 = value3 * 0.7;
+                                        value3 = value3 * 15/10;
                                     else if(rankNum == 2)
-                                        value3 = value3 * 0.3;
+                                        value3 = value3 * 5/10;
                                     else if(rankNum == 3)
-                                        value3 = value3 * 0.1;
+                                        value3 = value3 * 2/10;
                                     else if(rankNum == 4)
                                         value3 = 0;
 
@@ -206,13 +218,13 @@ public class Field extends AppCompatActivity {
                                     rankSt[rankNum] = "Horse 04";
 
                                     if(rankNum == 0)
-                                        value4 = value4 * 2;
+                                        value4 = value4 * 25/10;
                                     else if(rankNum == 1)
-                                        value4 = value4 * 0.7;
+                                        value4 = value4 * 15/10;
                                     else if(rankNum == 2)
-                                        value4 = value4 * 0.3;
+                                        value4 = value4 * 5/10;
                                     else if(rankNum == 3)
-                                        value4 = value4 * 0.1;
+                                        value4 = value4 * 2/10;
                                     else if(rankNum == 4)
                                         value4 = 0;
 
@@ -232,13 +244,13 @@ public class Field extends AppCompatActivity {
                                     rankSt[rankNum] = "Horse 05";
 
                                     if(rankNum == 0)
-                                        value5 = value5 * 2;
+                                        value5 = value5 * 25/10;
                                     else if(rankNum == 1)
-                                        value5 = value5 * 0.7;
+                                        value5 = value5 * 15/10;
                                     else if(rankNum == 2)
-                                        value5 = value5 * 0.3;
+                                        value5 = value5 * 5/10;
                                     else if(rankNum == 3)
-                                        value5 = value5 * 0.1;
+                                        value5 = value5 * 2/10;
                                     else if(rankNum == 4)
                                         value5 = 0;
 

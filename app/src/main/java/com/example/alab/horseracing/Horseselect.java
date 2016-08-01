@@ -1,11 +1,15 @@
 package com.example.alab.horseracing;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -25,7 +29,9 @@ public class Horseselect extends AppCompatActivity {
 
     TextView seedText;
 
-    int seedM = 5000;
+    int seedM = 2000;
+    int addM = 0;
+    Boolean checkM = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,23 +57,66 @@ public class Horseselect extends AppCompatActivity {
         text5 = (TextView) findViewById(R.id.money5);
 
         ImageButton button2 = (ImageButton) findViewById(R.id.nextbutton);
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Horseselect.this, Field.class);
-                intent.putExtra("HorseOne",moneyText1);
-                intent.putExtra("HorseTwo",moneyText2);
-                intent.putExtra("HorseThree",moneyText3);
-                intent.putExtra("HorseFour",moneyText4);
-                intent.putExtra("HorseFive",moneyText5);
-                startActivity(intent);
-                finish();
+
+                if (moneyText1 == 0 &&moneyText2 == 0 &&moneyText3 == 0 &&moneyText4 == 0 &&moneyText5 == 0 ){
+                    new AlertDialog.Builder(Horseselect.this)
+                            .setTitle("Horse Racing")
+                            .setMessage("You must bet")
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            })
+                            .create().show();
+                }else {
+                    checkM = true;
+                }
+
+                if (checkM) {
+                    Intent intent = new Intent(Horseselect.this, Field.class);
+                    intent.putExtra("HorseOne", moneyText1);
+                    intent.putExtra("HorseTwo", moneyText2);
+                    intent.putExtra("HorseThree", moneyText3);
+                    intent.putExtra("HorseFour", moneyText4);
+                    intent.putExtra("HorseFive", moneyText5);
+
+                    intent.putExtra("HorseSeed", seedM);
+
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
+        try {
+            Bundle bundle = getIntent().getExtras();
+            seedM = bundle.getInt("HorseSeedMoney");   //horse 1
+            addM = bundle.getInt("HorseRe");   //horse 1
+        }catch (Exception e){
 
+        };
+        seedM += addM;
 
+        if (seedM < 100 ){
+            new AlertDialog.Builder(Horseselect.this)
+                    .setTitle("Bank")
+                    .setMessage("We will lend you 1000$" + "\n" + "Good Luck")
+                    .setCancelable(false)
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            seedM = 1000;
+                            seedText.setText("" + seedM + "$");
+                        }
+                    }).create().show();
+        }
 
         seedText = (TextView) findViewById(R.id.total);
+
         seedText.setText("" + seedM + "$");
 
         plus1.setOnClickListener(new View.OnClickListener() {
@@ -202,20 +251,23 @@ public class Horseselect extends AppCompatActivity {
         int stamina = (rand.nextInt(5)+6)*10;
         int condition = (rand.nextInt(5)+6)*10;
         int winRate = 10 ;
-
         textInfo1.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+
         speed = (rand.nextInt(5)+6)*10;
         stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
         textInfo2.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+
         speed = (rand.nextInt(5)+6)*10;
         stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
         textInfo3.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+
         speed = (rand.nextInt(5)+6)*10;
         stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
         textInfo4.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+
         speed = (rand.nextInt(5)+6)*10;
         stamina = (rand.nextInt(5)+6)*10;
         condition = (rand.nextInt(5)+6)*10;
