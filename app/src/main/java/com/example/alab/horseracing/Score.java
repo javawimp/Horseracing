@@ -21,6 +21,8 @@ public class Score extends AppCompatActivity {
     double winrate4 = 0;
     double winrate5 = 0;
 
+    int winner = 0;
+
     int result;
 
     int seedM = 0;
@@ -44,10 +46,16 @@ public class Score extends AppCompatActivity {
         winrate4 = bundle.getDouble("FFourRate");
         winrate5 = bundle.getDouble("FFiveRate");
 
+        winner = bundle.getInt("Winner");
+
         TextView earnM = (TextView) findViewById(R.id.earnedmoney);
+        TextView winnerText = (TextView) findViewById(R.id.winnerhorse);
+
         result = value1 + value2 + value3 + value4 + value5;
 
         earnM.setText("" + result);
+        winnerText.setText("NO." + winner + " Horse");
+
         ImageButton button1 = (ImageButton) findViewById(R.id.againbutton);
 
         button1.setOnClickListener(new View.OnClickListener() {
