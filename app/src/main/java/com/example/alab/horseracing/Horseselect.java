@@ -267,7 +267,9 @@ public class Horseselect extends AppCompatActivity {
         TextView textInfo3 = (TextView) findViewById(R.id.stats3);
         TextView textInfo4 = (TextView) findViewById(R.id.stats4);
         TextView textInfo5 = (TextView) findViewById(R.id.stats5);
+
         Random rand = new Random();
+
         int speed = (rand.nextInt(5) + 6) * 10;
         int stamina = (rand.nextInt(5) + 6) * 10;
         int condition = (rand.nextInt(5) + 6) * 10;
