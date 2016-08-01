@@ -62,7 +62,7 @@ public class Horseselect extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (moneyText1 == 0 &&moneyText2 == 0 &&moneyText3 == 0 &&moneyText4 == 0 &&moneyText5 == 0 ){
+                if (moneyText1 == 0 && moneyText2 == 0 && moneyText3 == 0 && moneyText4 == 0 && moneyText5 == 0){
                     new AlertDialog.Builder(Horseselect.this)
                             .setTitle("Horse Racing")
                             .setMessage("You must bet")

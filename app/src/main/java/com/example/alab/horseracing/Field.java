@@ -264,7 +264,7 @@ public class Field extends AppCompatActivity {
                                 pause = false;
                                 resultbt.setX(1050);
                                 //rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
-                                rank.setText("\n" + "  1st:   " + value1 + "\n" +"  2nd:  "+ value2+ "\n" + "  3rd:   " + value3+ "\n" + "  4th:   "+value4 + "\n" + "  5th:   " + value5);
+                                rank.setText("\n" + "  No.1:  " + value1 + "\n" +"  No.2:  "+ value2 + "\n" + "  No.3:   " + value3 + "\n" + "  No.4:  " + value4 + "\n" + "  No.5:  " + value5);
                             }
                         }
                     }
