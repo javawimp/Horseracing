@@ -33,6 +33,12 @@ public class Horseselect extends AppCompatActivity {
     int addM = 0;
     Boolean checkM = false;
 
+    double winrate1 = 0;
+    double winrate2 = 0;
+    double winrate3 = 0;
+    double winrate4 = 0;
+    double winrate5 = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +68,7 @@ public class Horseselect extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (moneyText1 == 0 && moneyText2 == 0 && moneyText3 == 0 && moneyText4 == 0 && moneyText5 == 0){
+                if (moneyText1 == 0 && moneyText2 == 0 && moneyText3 == 0 && moneyText4 == 0 && moneyText5 == 0) {
                     new AlertDialog.Builder(Horseselect.this)
                             .setTitle("Horse Racing")
                             .setMessage("You must bet")
@@ -73,7 +79,7 @@ public class Horseselect extends AppCompatActivity {
                                 }
                             })
                             .create().show();
-                }else {
+                } else {
                     checkM = true;
                 }
 
@@ -85,6 +91,12 @@ public class Horseselect extends AppCompatActivity {
                     intent.putExtra("HorseFour", moneyText4);
                     intent.putExtra("HorseFive", moneyText5);
 
+                    intent.putExtra("OneRate", winrate1);
+                    intent.putExtra("TwoRate", winrate2);
+                    intent.putExtra("ThreeRate", winrate3);
+                    intent.putExtra("FourRate", winrate4);
+                    intent.putExtra("FiveRate", winrate5);
+
                     intent.putExtra("HorseSeed", seedM);
 
                     startActivity(intent);
@@ -92,16 +104,25 @@ public class Horseselect extends AppCompatActivity {
                 }
             }
         });
+
         try {
             Bundle bundle = getIntent().getExtras();
             seedM = bundle.getInt("HorseSeedMoney");   //horse 1
             addM = bundle.getInt("HorseRe");   //horse 1
-        }catch (Exception e){
 
-        };
+            winrate1 = bundle.getDouble("SOneRate");
+            winrate2 = bundle.getDouble("STwoRate");
+            winrate3 = bundle.getDouble("SThreeRate");
+            winrate4 = bundle.getDouble("SFourRate");
+            winrate5 = bundle.getDouble("SFiveRate");
+
+        } catch (Exception e) {
+
+        }
+        ;
         seedM += addM;
 
-        if (seedM < 100 ){
+        if (seedM < 100) {
             new AlertDialog.Builder(Horseselect.this)
                     .setTitle("Bank")
                     .setMessage("We will lend you 1000$" + "\n" + "Good Luck")
@@ -122,7 +143,7 @@ public class Horseselect extends AppCompatActivity {
         plus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(seedM > 0) {
+                if (seedM > 99) {
                     moneyText1 += 100;
                     seedM -= 100;
                     text1.setText("" + moneyText1 + "$");
@@ -134,7 +155,7 @@ public class Horseselect extends AppCompatActivity {
         plus2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(seedM > 0) {
+                if (seedM > 99) {
                     moneyText2 += 100;
                     seedM -= 100;
                     text2.setText("" + moneyText2 + "$");
@@ -146,7 +167,7 @@ public class Horseselect extends AppCompatActivity {
         plus3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(seedM > 0) {
+                if (seedM > 99) {
                     moneyText3 += 100;
                     seedM -= 100;
                     text3.setText("" + moneyText3 + "$");
@@ -159,7 +180,7 @@ public class Horseselect extends AppCompatActivity {
         plus4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(seedM > 0) {
+                if (seedM > 99) {
                     moneyText4 += 100;
                     seedM -= 100;
                     text4.setText("" + moneyText4 + "$");
@@ -172,7 +193,7 @@ public class Horseselect extends AppCompatActivity {
         plus5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(seedM > 0) {
+                if (seedM > 99) {
                     moneyText5 += 100;
                     seedM -= 100;
                     text5.setText("" + moneyText5 + "$");
@@ -247,31 +268,42 @@ public class Horseselect extends AppCompatActivity {
         TextView textInfo4 = (TextView) findViewById(R.id.stats4);
         TextView textInfo5 = (TextView) findViewById(R.id.stats5);
         Random rand = new Random();
-        int speed = (rand.nextInt(5)+6)*10;
-        int stamina = (rand.nextInt(5)+6)*10;
-        int condition = (rand.nextInt(5)+6)*10;
-        int winRate = 10 ;
-        textInfo1.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        int speed = (rand.nextInt(5) + 6) * 10;
+        int stamina = (rand.nextInt(5) + 6) * 10;
+        int condition = (rand.nextInt(5) + 6) * 10;
 
-        speed = (rand.nextInt(5)+6)*10;
-        stamina = (rand.nextInt(5)+6)*10;
-        condition = (rand.nextInt(5)+6)*10;
-        textInfo2.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        double horse1 = winrate1;
+        double horse2 = winrate2;
+        double horse3 = winrate3;
+        double horse4 = winrate4;
+        double horse5 = winrate5;
 
-        speed = (rand.nextInt(5)+6)*10;
-        stamina = (rand.nextInt(5)+6)*10;
-        condition = (rand.nextInt(5)+6)*10;
-        textInfo3.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        double grossRate = horse1 + horse2 + horse3 + horse4 + horse5;
 
-        speed = (rand.nextInt(5)+6)*10;
-        stamina = (rand.nextInt(5)+6)*10;
-        condition = (rand.nextInt(5)+6)*10;
-        textInfo4.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+        if (grossRate == 0)
+            grossRate = 1;
 
-        speed = (rand.nextInt(5)+6)*10;
-        stamina = (rand.nextInt(5)+6)*10;
-        condition = (rand.nextInt(5)+6)*10;
-        textInfo5.setText("\n"+"   Spd        "+speed+"\n"+"   Stm        "+stamina+"\n"+"   Con        "+condition+"\n"+" Win Rate  "+winRate+"%");
+            textInfo1.setText("\n" + "   Spd        " + speed + "\n" + "   Stm        " + stamina + "\n" + "   Con        " + condition + "\n" + " Win Rate  " + (int)(horse1 / grossRate * 100) + "%");
 
-   }
+            speed = (rand.nextInt(5) + 6) * 10;
+            stamina = (rand.nextInt(5) + 6) * 10;
+            condition = (rand.nextInt(5) + 6) * 10;
+            textInfo2.setText("\n" + "   Spd        " + speed + "\n" + "   Stm        " + stamina + "\n" + "   Con        " + condition + "\n" + " Win Rate  " + (int)(horse2 / grossRate * 100) + "%");
+
+            speed = (rand.nextInt(5) + 6) * 10;
+            stamina = (rand.nextInt(5) + 6) * 10;
+            condition = (rand.nextInt(5) + 6) * 10;
+            textInfo3.setText("\n" + "   Spd        " + speed + "\n" + "   Stm        " + stamina + "\n" + "   Con        " + condition + "\n" + " Win Rate  " + (int)(horse3 / grossRate * 100) + "%");
+
+            speed = (rand.nextInt(5) + 6) * 10;
+            stamina = (rand.nextInt(5) + 6) * 10;
+            condition = (rand.nextInt(5) + 6) * 10;
+            textInfo4.setText("\n" + "   Spd        " + speed + "\n" + "   Stm        " + stamina + "\n" + "   Con        " + condition + "\n" + " Win Rate  " + (int)(horse4 / grossRate * 100) + "%");
+
+            speed = (rand.nextInt(5) + 6) * 10;
+            stamina = (rand.nextInt(5) + 6) * 10;
+            condition = (rand.nextInt(5) + 6) * 10;
+            textInfo5.setText("\n" + "   Spd        " + speed + "\n" + "   Stm        " + stamina + "\n" + "   Con        " + condition + "\n" + " Win Rate  " + (int)(horse5 / grossRate * 100) + "%");
+
+        }
 }

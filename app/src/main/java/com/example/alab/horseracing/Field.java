@@ -46,8 +46,13 @@ public class Field extends AppCompatActivity {
     int value3 = 0;
     int value4 = 0;
     int value5 = 0;
-
     int seedMoney = 0;
+
+    double winrate1 = 0;
+    double winrate2 = 0;
+    double winrate3 = 0;
+    double winrate4 = 0;
+    double winrate5 = 0;
 
     Random rand;
 
@@ -71,6 +76,13 @@ public class Field extends AppCompatActivity {
         value3 = bundle.getInt("HorseThree"); //horse 3
         value4 = bundle.getInt("HorseFour");  //horse 4
         value5 = bundle.getInt("HorseFive");  //horse 5
+
+        winrate1 = bundle.getDouble("OneRate");
+        winrate2 = bundle.getDouble("TwoRate");
+        winrate3 = bundle.getDouble("ThreeRate");
+        winrate4 = bundle.getDouble("FourRate");
+        winrate5 = bundle.getDouble("FiveRate");
+
         seedMoney = bundle.getInt("HorseSeed");
 
         resultbt = (ImageButton) findViewById(R.id.resultbutton);
@@ -87,6 +99,12 @@ public class Field extends AppCompatActivity {
                 intent.putExtra("HorseFiveRe",value5);
                 intent.putExtra("HorseSeedM",seedMoney);
 
+                intent.putExtra("FOneRate",winrate1);
+                intent.putExtra("FTwoRate",winrate2);
+                intent.putExtra("FThreeRate",winrate3);
+                intent.putExtra("FFourRate",winrate4);
+                intent.putExtra("FFiveRate",winrate5);
+
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +120,7 @@ public class Field extends AppCompatActivity {
         });
 
         rank = (TextView) findViewById(R.id.rankText);
-        rank.setText("\n" + "  No.1" + "\n" +"  No.2"+ "\n" +"  No.3" + "\n" + "  No.4"+ "\n" + "  No.5");
+        rank.setText("\n" + "  No.1" + "\n" +"  No.2" + "\n" +"  No.3" + "\n" + "  No.4" + "\n" + "  No.5");
 
         a = 1;
 
@@ -138,8 +156,10 @@ public class Field extends AppCompatActivity {
                                     ho1 = true;
                                     rankSt[rankNum] = "Horse 01";
 
-                                    if(rankNum == 0)
+                                    if(rankNum == 0) {
                                         value1 = value1 * 25/10;
+                                        winrate1++;
+                                    }
                                     else if(rankNum == 1)
                                         value1 = value1 * 15/10;
                                     else if(rankNum == 2)
@@ -165,8 +185,10 @@ public class Field extends AppCompatActivity {
                                     ho2 = true;
                                     rankSt[rankNum] = "Horse 02";
 
-                                    if(rankNum == 0)
+                                    if(rankNum == 0){
                                         value2 = value2 * 25/10;
+                                        winrate2++;
+                                    }
                                     else if(rankNum == 1)
                                         value2 = value2 * 15/10;
                                     else if(rankNum == 2)
@@ -191,8 +213,10 @@ public class Field extends AppCompatActivity {
                                     ho3 = true;
                                     rankSt[rankNum] = "Horse 03";
 
-                                    if(rankNum == 0)
+                                    if(rankNum == 0){
                                         value3 = value3 * 25/10;
+                                        winrate3++;
+                                    }
                                     else if(rankNum == 1)
                                         value3 = value3 * 15/10;
                                     else if(rankNum == 2)
@@ -217,8 +241,10 @@ public class Field extends AppCompatActivity {
                                     ho4 = true;
                                     rankSt[rankNum] = "Horse 04";
 
-                                    if(rankNum == 0)
+                                    if(rankNum == 0){
                                         value4 = value4 * 25/10;
+                                        winrate4++;
+                                     }
                                     else if(rankNum == 1)
                                         value4 = value4 * 15/10;
                                     else if(rankNum == 2)
@@ -243,8 +269,10 @@ public class Field extends AppCompatActivity {
                                     ho5 = true;
                                     rankSt[rankNum] = "Horse 05";
 
-                                    if(rankNum == 0)
+                                    if(rankNum == 0){
                                         value5 = value5 * 25/10;
+                                        winrate5++;
+                                    }
                                     else if(rankNum == 1)
                                         value5 = value5 * 15/10;
                                     else if(rankNum == 2)
@@ -264,8 +292,9 @@ public class Field extends AppCompatActivity {
                                 pause = false;
                                 resultbt.setX(1050);
                                 //rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
-                                rank.setText("\n" + "  No.1:  " + value1 + "\n" +"  No.2:  "+ value2 + "\n" + "  No.3:   " + value3 + "\n" + "  No.4:  " + value4 + "\n" + "  No.5:  " + value5);
+                                rank.setText("\n" + "  No.1:  " +  value1  + "\n" +"  No.2:  " +  value2 + "\n" + "  No.3:  " +  value3 + "\n" + "  No.4:  " +  value4 + "\n" + "  No.5:  " +  value5);
                             }
+
                         }
                     }
                 });

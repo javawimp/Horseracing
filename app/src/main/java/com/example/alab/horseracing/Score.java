@@ -15,6 +15,12 @@ public class Score extends AppCompatActivity {
     int value4 = 0;
     int value5 = 0;
 
+    double winrate1 = 0;
+    double winrate2 = 0;
+    double winrate3 = 0;
+    double winrate4 = 0;
+    double winrate5 = 0;
+
     int result;
 
     int seedM = 0;
@@ -32,6 +38,12 @@ public class Score extends AppCompatActivity {
         value5 = bundle.getInt("HorseFiveRe");  //horse 5
         seedM = bundle.getInt("HorseSeedM");
 
+        winrate1 = bundle.getDouble("FOneRate");
+        winrate2 = bundle.getDouble("FTwoRate");
+        winrate3 = bundle.getDouble("FThreeRate");
+        winrate4 = bundle.getDouble("FFourRate");
+        winrate5 = bundle.getDouble("FFiveRate");
+
         TextView earnM = (TextView) findViewById(R.id.earnedmoney);
         result = value1 + value2 + value3 + value4 + value5;
 
@@ -44,6 +56,13 @@ public class Score extends AppCompatActivity {
                 Intent intent = new Intent(Score.this, Horseselect.class);
                 intent.putExtra("HorseRe", result);
                 intent.putExtra("HorseSeedMoney", seedM);
+
+                intent.putExtra("SOneRate", winrate1);
+                intent.putExtra("STwoRate", winrate2);
+                intent.putExtra("SThreeRate", winrate3);
+                intent.putExtra("SFourRate", winrate4);
+                intent.putExtra("SFiveRate", winrate5);
+
                 startActivity(intent);
                 finish();
             }
