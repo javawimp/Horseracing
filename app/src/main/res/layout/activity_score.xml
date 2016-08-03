@@ -12,27 +12,27 @@
     tools:context="com.example.alab.horseracing.Score">
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Champion Horse"
         android:textColor="#FFFFFF"
-        android:textSize="35sp"
+        android:textSize="36sp"
         android:textAllCaps="false"
-        android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"/>
 
     <TextView
+        android:id="@+id/moneyearnedtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="You Earned"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textAllCaps="false"
-        android:id="@+id/textView"
         android:layout_marginTop="160dp"
-        android:layout_marginLeft="350dp"/>
+        android:layout_marginLeft="435dp"/>
 
     <TextView
         android:id="@+id/earnedmoney"
@@ -43,7 +43,7 @@
         android:textSize="25sp"
         android:textAllCaps="false"
         android:layout_marginTop="200dp"
-        android:layout_alignRight="@+id/textView" />
+        android:layout_alignRight="@+id/moneyearnedtext" />
 
     <ImageView
         android:id="@+id/championhorse"
@@ -61,7 +61,7 @@
         android:background="@android:color/transparent"
         android:src="@drawable/again"
         android:layout_marginTop="255dp"
-        android:layout_marginLeft="405dp"/>
+        android:layout_marginLeft="485dp"/>
 
     <TextView
         android:id="@+id/winnerhorse"
@@ -72,7 +72,7 @@
         android:textSize="25sp"
         android:textAllCaps="false"
         android:layout_marginTop="100dp"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignLeft="@+id/moneyearnedtext"
+        android:layout_alignStart="@+id/moneyearnedtext" />
 
 </RelativeLayout>

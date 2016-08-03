@@ -107,8 +107,8 @@ public class Horseselect extends AppCompatActivity {
 
         try {
             Bundle bundle = getIntent().getExtras();
-            seedM = bundle.getInt("HorseSeedMoney");   //horse 1
-            addM = bundle.getInt("HorseRe");   //horse 1
+            seedM = bundle.getInt("HorseSeedMoney");
+            addM = bundle.getInt("HorseRe");
 
             winrate1 = bundle.getDouble("SOneRate");
             winrate2 = bundle.getDouble("STwoRate");

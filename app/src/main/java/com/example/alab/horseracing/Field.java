@@ -25,7 +25,6 @@ public class Field extends AppCompatActivity {
     boolean ho3 = false;
     boolean ho4 = false;
     boolean ho5 = false;
-    boolean arrive = false;
 
     ImageView horse1;
     ImageView horse2;
@@ -95,26 +94,26 @@ public class Field extends AppCompatActivity {
                 seedMoney = bundle.getInt("HorseSeed");
 
         resultbt = (ImageButton) findViewById(R.id.resultbutton);
-        resultbt.setX(2000);
+        resultbt.setX(2150);
         resultbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Field.this, Score.class);
 
-                intent.putExtra("HorseOneRe",value1);
-                intent.putExtra("HorseTwoRe",value2);
-                intent.putExtra("HorseThreeRe",value3);
-                intent.putExtra("HorseFourRe",value4);
-                intent.putExtra("HorseFiveRe",value5);
-                intent.putExtra("HorseSeedM",seedMoney);
+                intent.putExtra("HorseOneRe", value1);
+                intent.putExtra("HorseTwoRe", value2);
+                intent.putExtra("HorseThreeRe", value3);
+                intent.putExtra("HorseFourRe", value4);
+                intent.putExtra("HorseFiveRe", value5);
+                intent.putExtra("HorseSeedM", seedMoney);
 
-                intent.putExtra("FOneRate",winrate1);
-                intent.putExtra("FTwoRate",winrate2);
-                intent.putExtra("FThreeRate",winrate3);
-                intent.putExtra("FFourRate",winrate4);
-                intent.putExtra("FFiveRate",winrate5);
+                intent.putExtra("FOneRate", winrate1);
+                intent.putExtra("FTwoRate", winrate2);
+                intent.putExtra("FThreeRate", winrate3);
+                intent.putExtra("FFourRate", winrate4);
+                intent.putExtra("FFiveRate", winrate5);
 
-                intent.putExtra("Winner",winner);
+                intent.putExtra("Winner", winner);
 
                 startActivity(intent);
                 finish();
@@ -126,7 +125,7 @@ public class Field extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                pause = true;
-                startbt.setX(2500);
+                startbt.setX(3000);
             }
         });
 
@@ -142,10 +141,10 @@ public class Field extends AppCompatActivity {
         horse5 = (ImageView) findViewById(R.id.racehorse5);
         lineEnd = (ImageView) findViewById(R.id.endLine);
 
-        lineEnd.setX(900);
+        lineEnd.setX(1685);
 
         rand = new Random();
-        addmove = rand.nextInt(101) + 5;
+        addmove = rand.nextInt(126) + 5;
 
 
         Timer timer = new Timer();
@@ -158,12 +157,12 @@ public class Field extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (pause == true) {
-                            addmove = rand.nextInt(20) + 1;
+                            addmove = rand.nextInt(25) + 1;
                             move1 += addmove;
                             horse1.setX(move1);
                             if (ho1 == false) {
-                                if (horse1.getX() > 900) {
-                                    horse1.setX(900);
+                                if (horse1.getX() > 1650) {
+                                    horse1.setX(1650);
                                     ho1 = true;
                                     rankSt[rankNum] = "Horse 01";
 
@@ -184,16 +183,16 @@ public class Field extends AppCompatActivity {
 
                                     rankNum++;
                                 }
-                            }else if(horse1.getX() > 900){
-                                horse1.setX(900);
+                            }else if(horse1.getX() > 1650){
+                                horse1.setX(1650);
                             }
 
-                            addmove = rand.nextInt(20) + 1;
+                            addmove = rand.nextInt(25) + 1;
                             move2 += addmove;
                             horse2.setX(move2);
                             if (ho2 == false) {
-                                if (horse2.getX() > 900) {
-                                    horse2.setX(900);
+                                if (horse2.getX() > 1650) {
+                                    horse2.setX(1650);
                                     ho2 = true;
                                     rankSt[rankNum] = "Horse 02";
 
@@ -213,16 +212,16 @@ public class Field extends AppCompatActivity {
 
                                     rankNum++;
                                 }
-                            }else if(horse2.getX() > 900){
-                                horse2.setX(900);
+                            }else if(horse2.getX() > 1650){
+                                horse2.setX(1650);
                             }
 
-                            addmove = rand.nextInt(20) + 1;
+                            addmove = rand.nextInt(25) + 1;
                             move3 += addmove;
                             horse3.setX(move3);
                             if (ho3 == false) {
-                                if (horse3.getX() > 900) {
-                                    horse3.setX(900);
+                                if (horse3.getX() > 1650) {
+                                    horse3.setX(1650);
                                     ho3 = true;
                                     rankSt[rankNum] = "Horse 03";
 
@@ -242,16 +241,16 @@ public class Field extends AppCompatActivity {
 
                                     rankNum++;
                                 }
-                            }else if(horse3.getX() > 900){
-                                horse3.setX(900);
+                            }else if(horse3.getX() > 1650){
+                                horse3.setX(1650);
                             }
 
-                            addmove = rand.nextInt(20) + 1;
+                            addmove = rand.nextInt(25) + 1;
                             move4 += addmove;
                             horse4.setX(move4);
                             if (ho4 == false) {
-                                if (horse4.getX() > 900) {
-                                    horse4.setX(900);
+                                if (horse4.getX() > 1650) {
+                                    horse4.setX(1650);
                                     ho4 = true;
                                     rankSt[rankNum] = "Horse 04";
 
@@ -271,16 +270,16 @@ public class Field extends AppCompatActivity {
 
                                     rankNum++;
                                 }
-                            }else if(horse4.getX() > 900){
-                                horse4.setX(900);
+                            }else if(horse4.getX() > 1650){
+                                horse4.setX(1650);
                             }
 
-                            addmove = rand.nextInt(20) + 1;
+                            addmove = rand.nextInt(25) + 1;
                             move5 += addmove;
                             horse5.setX(move5);
                             if (ho5 == false) {
-                                if (horse5.getX() > 900) {
-                                    horse5.setX(900);
+                                if (horse5.getX() > 1650) {
+                                    horse5.setX(1650);
                                     ho5 = true;
                                     rankSt[rankNum] = "Horse 05";
 
@@ -300,13 +299,13 @@ public class Field extends AppCompatActivity {
 
                                     rankNum++;
                                 }
-                            }else if(horse5.getX() > 900){
-                                horse5.setX(900);
+                            }else if(horse5.getX() > 1650){
+                                horse5.setX(1650);
                             }
 
                             if(ho1 == true && ho2 == true && ho3 == true && ho4 == true && ho5 == true){
                                 pause = false;
-                                resultbt.setX(1050);
+                                resultbt.setX(2150);
                                 //rank.setText("\n" + "  1st:   " + rankSt[0] + "\n" +"  2nd:  "+ rankSt[1]+ "\n" + "  3rd:   " + rankSt[2]+ "\n" + "  4th:   "+rankSt[3] + "\n" + "  5th:   " + rankSt[4]);
                                 rank.setText("\n" + "  No.1:  " +  value1  + "\n" +"  No.2:  " +  value2 + "\n" + "  No.3:  " +  value3 + "\n" + "  No.4:  " +  value4 + "\n" + "  No.5:  " +  value5);
                             }
