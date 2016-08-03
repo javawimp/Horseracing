@@ -20,7 +20,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/horse_one"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"/>
 
     <ImageView
@@ -28,7 +28,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/horse_two"
-        android:layout_marginTop="107.5dp"
+        android:layout_marginTop="90dp"
         android:layout_marginLeft="10dp"/>
 
     <ImageView
@@ -36,7 +36,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/horse_three"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="10dp"/>
 
     <ImageView
@@ -44,7 +44,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/horse_four"
-        android:layout_marginTop="232.5dp"
+        android:layout_marginTop="210dp"
         android:layout_marginLeft="10dp"/>
 
     <ImageView
@@ -52,19 +52,19 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/horse_five"
-        android:layout_marginTop="295dp"
+        android:layout_marginTop="270dp"
         android:layout_marginLeft="10dp"/>
 
     <TextView
         android:id="@+id/rankText"
-        android:layout_width="90dp"
+        android:layout_width="85dp"
         android:layout_height="100dp"
         android:background="@drawable/text_background"
         android:text="\n 1st\n 2nd\n 3rd\n 4th\n 5th"
         android:textColor="#000000"
         android:textSize="12sp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="575dp"/>
+        android:layout_marginLeft="500dp"/>
 
 
     <ImageButton
@@ -85,6 +85,6 @@
         android:background="@android:color/transparent"
         android:src="@drawable/result"
         android:layout_marginTop="300dp"
-        android:layout_marginLeft="515dp"/>
+        android:layout_marginLeft="505dp"/>
 
 </RelativeLayout>
